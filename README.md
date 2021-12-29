@@ -69,3 +69,13 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+### `JSON DB`
+use this method to start a server to run a json server locally 
+```
+json-server --watch db.json
+```
+use this other one to add a delay to your application db json server
+```
+json-server --watch db.json --delay 2000
+```

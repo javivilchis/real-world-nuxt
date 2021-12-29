@@ -1,3 +1,4 @@
+import EventService from './services/EventService.js'
 export default {
   /*
         ** Customize the progress-bar color
@@ -49,5 +50,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  generate: {
+    routes: () => {
+      return EventService.getEvents().then(response => {
+        return response.data.map(event => {
+          return '/event/' + event.id
+        })
+      })
+    }
   }
 }

@@ -51,7 +51,7 @@ hr {
   overflow: visible;
 }
 a {
-  color: #39b982;
+  color: #39b0b9;
   font-weight: 600;
   background-color: transparent;
 }
@@ -104,7 +104,7 @@ small {
   font-size: 20px;
 }
 .-text-primary {
-  color: #39b982;
+  color: #39b0b9;
 }
 .-text-base {
   color: #000;
@@ -171,7 +171,7 @@ button:-moz-focusring,
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring {
-  outline: 2px solid #39b982;
+  outline: 2px solid #39b0b9;
 }
 label {
   color: rgba(0, 0, 0, 0.5);
@@ -216,7 +216,7 @@ textarea {
 [type='number']:focus,
 [type='search']:focus,
 [type='password']:focus {
-  border-color: #39b982;
+  border-color: #39b0b9;
 }
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
@@ -244,7 +244,7 @@ select {
   appearance: none;
 }
 select:focus {
-  border-color: #39b982;
+  border-color: #39b0b9;
   outline: 0;
 }
 select:focus::ms-value {

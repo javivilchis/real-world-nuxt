@@ -1,5 +1,6 @@
 <template>
 <div>
+  
   <h1>Events</h1>
    <EventCard
           v-for="(event, index) in events"
@@ -7,16 +8,18 @@
           :event="event"
           :data-index="index"
         />
+        <Tutorial />
         </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import EventCard from '@/components/EventCard.vue'
-
+import Tutorial from '@/components/Tutorial.vue'
 export default {
   components: {
     EventCard,
+    Tutorial,
   },
 
   async fetch({ store, error }) {

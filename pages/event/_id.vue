@@ -1,5 +1,5 @@
 <template>
-      <div>
+      <div class="single">
         <div class="event-header">
           <span class="eyebrow">
             @{{ event.time }} on {{ event.date }}
@@ -10,27 +10,33 @@
           <h5>Organized by {{ event.organizer ? event.organizer.name : '' }}</h5>
           <h5>Category: {{ event.category }}</h5>
         </div>
-    
-        <span name="map">
-          <h2>Location</h2>
-        </span>
-    
-        <address>{{ event.location }}</address>
-    
-        <h2>Event details</h2>
-        <p>{{ event.description }}</p>
-    
-        <h2>
-          Attendees
-          <span class="badge -fill-gradient">
-            {{ event.attendees ? event.attendees.length : 0 }}
-          </span>
-        </h2>
-        <ul class="list-group">
-          <li v-for="(attendee, index) in event.attendees" :key="index" class="list-item">
-            <b>{{ attendee.name }}</b>
-          </li>
-        </ul>
+
+        <div class="details">
+          <div class="item1">
+            <span name="map">
+              <h2>Location</h2>
+            </span>
+        
+            <address>{{ event.location }}</address>
+          </div>
+          <div class="item2">
+            <h2>Event details</h2>
+            <p>{{ event.description }}</p>
+          </div>
+          <div class="item3">
+            <h2>
+              Attendees
+              <span class="badge -fill-gradient">
+                {{ event.attendees ? event.attendees.length : 0 }}
+              </span>
+            </h2>
+            <ul class="list-group">
+              <li v-for="(attendee, index) in event.attendees" :key="index" class="list-item">
+                <b>{{ attendee.name }}</b>
+              </li>
+            </ul>
+            </div>
+          </div>
       </div>
     </template>
     <script>
@@ -65,10 +71,39 @@ export default {
 }
 </script>
 <style scoped>
+.single {
+  margin-top: 40px;
+}
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+h2 {
+  font-size: 2em;
+  color: #464646;
+  border-bottom: 1px #333 solid;
+}
+.item1,
+.item1 h2,
+.item2,
+.item2 h2 {
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-beetween;
+  align-items: flex-start;
+}
+div {
+  padding: 5px 2px 2px 3px;
+  margin-bottom: 4px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
 .prompt-box {
+  border: 1px #333 solid;
   position: relative;
   overflow: hidden;
-  padding: 1em;
+
   margin-bottom: 24px;
   transform: scaleY(1);
 }

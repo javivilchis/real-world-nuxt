@@ -1,5 +1,7 @@
 # mynuxt
 
+A simple application including SEO adaptaption and axios access.
+
 ## Build Setup
 
 ```bash

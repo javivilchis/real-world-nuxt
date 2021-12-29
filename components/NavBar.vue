@@ -3,7 +3,7 @@
         <nuxt-link to="/" class="brand">Real World Events</nuxt-link>
         <nav>
           <nuxt-link to="/">List</nuxt-link>&nbsp;|
-          <nuxt-link to="/create">Create</nuxt-link> |
+          <nuxt-link to="/event/create">Create</nuxt-link> |
           <nuxt-link to="/universal">What is Universal Mode?</nuxt-link>
         </nav>
       </div>
